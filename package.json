@@ -1,0 +1,8 @@
+{
+  "name": "ui-agent-builder",
+  "private": true,
+  "description": "Static APP UI prototype starter. Clone or use as a GitHub template for each new project.",
+  "scripts": {
+    "start": "npx --yes serve . -p 4173"
+  }
+}

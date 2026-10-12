@@ -1,0 +1,37 @@
+<section class="space-y-4" data-view-title="Inventory">
+  <div class="flex flex-wrap items-end justify-between gap-3">
+    <div>
+      <h1 class="text-xl font-semibold">Items</h1>
+      <p class="text-sm text-slate-500 dark:text-slate-400">Search, sort, and page through the catalog.</p>
+    </div>
+    <button type="button" data-view="views/inventory/item-form.html" data-title="New Item" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-500">
+      <i class="fa-solid fa-plus"></i> Add item
+    </button>
+  </div>
+
+  <div class="flex flex-wrap gap-2">
+    <input data-inventory-search type="search" placeholder="Filter by name or SKU" class="flex-1 min-w-[200px] rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-500">
+    <select data-inventory-status class="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 px-3 py-2 text-sm">
+      <option value="">All statuses</option>
+      <option>Active</option>
+      <option>Draft</option>
+      <option>Archived</option>
+    </select>
+  </div>
+
+  <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 dark:bg-slate-950 text-left text-slate-500">
+        <tr>
+          <th class="px-4 py-3 font-medium"><button type="button" data-sort="sku" class="hover:text-indigo-600">SKU</button></th>
+          <th class="px-4 py-3 font-medium"><button type="button" data-sort="name" class="hover:text-indigo-600">Name</button></th>
+          <th class="px-4 py-3 font-medium"><button type="button" data-sort="category" class="hover:text-indigo-600">Category</button></th>
+          <th class="px-4 py-3 font-medium"><button type="button" data-sort="price" class="hover:text-indigo-600">Price</button></th>
+          <th class="px-4 py-3 font-medium"><button type="button" data-sort="status" class="hover:text-indigo-600">Status</button></th>
+        </tr>
+      </thead>
+      <tbody data-inventory-body class="divide-y divide-slate-100 dark:divide-slate-800"></tbody>
+    </table>
+    <div data-inventory-pager class="flex items-center justify-between px-4 py-3 border-t border-slate-200 dark:border-slate-800 text-sm"></div>
+  </div>
+</section>

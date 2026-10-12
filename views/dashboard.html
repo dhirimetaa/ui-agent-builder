@@ -1,0 +1,26 @@
+<section class="space-y-6" data-view-title="Dashboard">
+  <div class="flex items-end justify-between gap-4">
+    <div>
+      <h1 class="text-xl font-semibold">Good to see you</h1>
+      <p class="text-sm text-slate-500 dark:text-slate-400">Snapshot of orders, stock, cash, and people.</p>
+    </div>
+    <button type="button" data-view="views/inventory/item-form.html" data-title="New Item" class="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-500">
+      <i class="fa-solid fa-plus"></i> Quick add
+    </button>
+  </div>
+
+  <div id="metric-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4"></div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+    <div class="lg:col-span-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl">
+      <div class="px-4 py-3 border-b border-slate-200 dark:border-slate-800 font-semibold text-sm">Recent activity</div>
+      <ul id="activity-list" class="divide-y divide-slate-100 dark:divide-slate-800"></ul>
+    </div>
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-4 space-y-3">
+      <h2 class="font-semibold text-sm">Quick actions</h2>
+      <button type="button" data-view="views/inventory/list.html" data-title="Inventory" class="w-full text-left px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-indigo-400 text-sm">Review inventory</button>
+      <button type="button" data-view="views/finance/overview.html" data-title="Finance" class="w-full text-left px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-indigo-400 text-sm">Open receivables</button>
+      <button type="button" data-view="views/hr/directory.html" data-title="People" class="w-full text-left px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:border-indigo-400 text-sm">People directory</button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #94a3b8 transparent;
+}
+
+.dark * {
+  scrollbar-color: #334155 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.dark *::-webkit-scrollbar-thumb {
+  background: #334155;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+#app-sidebar {
+  transition: width 180ms ease;
+}
+
+.toast-in {
+  animation: toast-in 180ms ease;
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+.dropzone.is-dragover {
+  border-color: #4f46e5;
+  background: rgb(238 242 255);
+}
+
+.dark .dropzone.is-dragover {
+  background: rgb(49 46 129 / 0.25);
+}

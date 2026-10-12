@@ -1,0 +1,55 @@
+<header class="h-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between gap-4 px-6">
+  <div class="min-w-0">
+    <p class="text-[11px] uppercase tracking-wider text-slate-400" id="org-name">Organization</p>
+    <div class="text-sm font-semibold truncate" id="current-view-title">Dashboard</div>
+  </div>
+
+  <div class="flex-1 max-w-md relative">
+    <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+    <input id="global-search" type="search" placeholder="Search items, invoices, people" class="w-full rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 pl-9 pr-3 py-2 text-sm outline-none focus:ring-2 focus:ring-indigo-500">
+    <div id="search-results" class="hidden absolute left-0 right-0 mt-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg shadow-lg z-40 overflow-hidden"></div>
+  </div>
+
+  <div class="flex items-center gap-2">
+    <button type="button" data-view="views/inventory/item-form.html" data-title="New Item" class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-500">
+      <i class="fa-solid fa-plus"></i> New item
+    </button>
+
+    <div class="relative">
+      <button type="button" id="notif-btn" class="relative p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800" title="Notifications">
+        <i class="fa-regular fa-bell"></i>
+        <span id="notif-badge" class="absolute top-1 right-1 min-w-4 h-4 px-1 rounded-full bg-indigo-600 text-white text-[10px] font-bold flex items-center justify-center">0</span>
+      </button>
+      <div id="notif-panel" class="hidden absolute right-0 mt-2 w-80 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg shadow-lg z-50">
+        <div class="flex items-center justify-between px-3 py-2 border-b border-slate-200 dark:border-slate-800">
+          <span class="text-sm font-semibold">Notifications</span>
+          <button type="button" id="notif-read" class="text-xs text-indigo-600 dark:text-indigo-400">Mark all read</button>
+        </div>
+        <div id="notif-list" class="max-h-80 overflow-y-auto"></div>
+      </div>
+    </div>
+
+    <div class="relative">
+      <button type="button" id="user-menu-btn" class="flex items-center gap-2 p-1 rounded-full focus:ring-2 focus:ring-indigo-500">
+        <span id="user-initials" class="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-bold text-xs">AR</span>
+      </button>
+      <div id="user-dropdown" class="hidden absolute right-0 mt-2 w-56 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg shadow-lg py-2 z-50">
+        <div class="px-4 py-2">
+          <p id="user-name" class="text-sm font-semibold">Alex Rivera</p>
+          <p id="user-role" class="text-xs text-slate-500">Product Admin</p>
+        </div>
+        <hr class="my-1 border-slate-200 dark:border-slate-800">
+        <button type="button" data-modal="profile" class="w-full text-left px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-800">Profile</button>
+        <button type="button" data-modal="org" class="w-full text-left px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-800">Organization Settings</button>
+        <button type="button" id="theme-toggle" class="w-full text-left px-4 py-2 text-sm hover:bg-slate-100 dark:hover:bg-slate-800">
+          <i class="fa-solid fa-moon dark:hidden mr-2"></i>
+          <i class="fa-solid fa-sun hidden dark:inline mr-2"></i>
+          <span class="dark:hidden">Dark mode</span>
+          <span class="hidden dark:inline">Light mode</span>
+        </button>
+        <hr class="my-1 border-slate-200 dark:border-slate-800">
+        <button type="button" data-modal="logout" class="w-full text-left px-4 py-2 text-sm text-red-500 hover:bg-slate-100 dark:hover:bg-slate-800">Log Out</button>
+      </div>
+    </div>
+  </div>
+</header>

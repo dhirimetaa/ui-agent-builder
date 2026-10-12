@@ -1,0 +1,49 @@
+<aside id="app-sidebar" class="w-64 h-full bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
+  <div class="h-16 flex items-center justify-between px-4 border-b border-slate-200 dark:border-slate-800">
+    <div class="flex items-center min-w-0 font-bold tracking-wide text-indigo-600 dark:text-indigo-400">
+      <i class="fa-solid fa-cube mr-2 shrink-0"></i>
+      <span class="sidebar-label truncate">APP PLATFORM</span>
+    </div>
+    <button type="button" id="sidebar-collapse" class="p-2 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 dark:hover:text-slate-200" title="Collapse sidebar">
+      <i class="fa-solid fa-angles-left"></i>
+    </button>
+  </div>
+
+  <nav class="flex-1 overflow-y-auto p-3 space-y-5 text-sm">
+    <div>
+      <p class="sidebar-label px-3 mb-1 text-[11px] font-semibold uppercase tracking-wider text-slate-400">Overview</p>
+      <button type="button" data-view="views/dashboard.html" data-title="Dashboard" class="nav-btn w-full flex items-center gap-2 px-3 py-2 rounded-lg font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+        <i class="fa-solid fa-chart-pie w-5 text-center"></i>
+        <span class="sidebar-label">Dashboard</span>
+      </button>
+    </div>
+
+    <div>
+      <p class="sidebar-label px-3 mb-1 text-[11px] font-semibold uppercase tracking-wider text-slate-400">Inventory</p>
+      <button type="button" data-view="views/inventory/list.html" data-title="Inventory" class="nav-btn w-full flex items-center gap-2 px-3 py-2 rounded-lg font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+        <i class="fa-solid fa-table-list w-5 text-center"></i>
+        <span class="sidebar-label">Items</span>
+      </button>
+      <button type="button" data-view="views/inventory/item-form.html" data-title="New Item" class="nav-btn w-full flex items-center gap-2 px-3 py-2 rounded-lg font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+        <i class="fa-solid fa-boxes-stacked w-5 text-center"></i>
+        <span class="sidebar-label">New Item</span>
+      </button>
+    </div>
+
+    <div>
+      <p class="sidebar-label px-3 mb-1 text-[11px] font-semibold uppercase tracking-wider text-slate-400">Finance</p>
+      <button type="button" data-view="views/finance/overview.html" data-title="Finance" class="nav-btn w-full flex items-center gap-2 px-3 py-2 rounded-lg font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+        <i class="fa-solid fa-file-invoice-dollar w-5 text-center"></i>
+        <span class="sidebar-label">Overview</span>
+      </button>
+    </div>
+
+    <div>
+      <p class="sidebar-label px-3 mb-1 text-[11px] font-semibold uppercase tracking-wider text-slate-400">People</p>
+      <button type="button" data-view="views/hr/directory.html" data-title="People" class="nav-btn w-full flex items-center gap-2 px-3 py-2 rounded-lg font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800">
+        <i class="fa-solid fa-user-group w-5 text-center"></i>
+        <span class="sidebar-label">Directory</span>
+      </button>
+    </div>
+  </nav>
+</aside>
